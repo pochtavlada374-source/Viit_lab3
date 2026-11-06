@@ -1,7 +1,8 @@
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+measurements = (7, 5, 6, 9, 12, 4, 2, 1)
+print("Кортеж:", measurements)
 
-print("Первые три элемента:", numbers[:3])
-print("Последние три элемента:", numbers[-3:])
-print("Элементы с 3 по 7:", numbers[2:7])
-print("Каждый второй элемент:", numbers[::2])
-print("Список в обратном порядке:", numbers[::-1])
+print("Первый элемент:", measurements[0])
+print("Последний элемент:", measurements[-1])
+print("Срез [1:3]:", measurements[1:3])
+
+measurements[0] = 10
