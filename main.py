@@ -1,15 +1,25 @@
-measurements = (7, 5, 6, 9, 12, 4, 2, 1)
+def Summ(measurements):
+    k = 0
+    for num in measurements:
+        k += num
+    return k
 
-temp_list = list(measurements)
-temp_list[0] = 10
-print("Количество элементов:", len(temp_list))
-print("Сумма элементов:", sum(temp_list))
-print("Минимальное значение:", min(temp_list))
-print("Максимальное значение:", max(temp_list))
-print("Среднее арифметическое:", sum(temp_list) / len(temp_list))
+def Minn(measurements):
+    mini = measurements[0]
+    for i in measurements:
+        if i < mini:
+            mini = i
+    return mini
 
-sorted_copy = sorted(temp_list)
-print("Копия:", sorted_copy)
+def Maxx(measurements):
+    maxi = measurements[0]
+    for i in measurements:
+        if i > maxi:
+            maxi = i
+    return maxi
 
-temp_list.sort()
-print("Список после .sort():", temp_list)
+measurements = [7, 5, 6, 9, 12, 4, 2, 1]
+
+print("Summ:", Summ(measurements), "/ sum():", sum(measurements))
+print("Minn:", Minn(measurements), "/ min():", min(measurements))
+print("Maxx:", Maxx(measurements), "/ max():", max(measurements))
