@@ -1,10 +1,20 @@
-def find_element(numbers, target):
-    for index, value in enumerate(numbers):
-        if value == target:
-            return index
-    return -1
+def analyze(numbers):
+    minimum = numbers[0]
+    maximum = numbers[0]
+    total = 0
+    for num in numbers:
+        if num < minimum:
+            minimum = num
+        if num > maximum:
+            maximum = num
+        total += num
+    average = total / len(numbers)
+    return minimum, maximum, average
 
-numbers = [10, 20, 12, 3, 4, 61, 34, 100]
+numbers = [5, 12, 8, 21, 34, 17, 9, 44, 3, 27]
 
-print(find_element(numbers, 34))
-print(find_element(numbers, 13))
+mn, mx, avg = analyze(numbers)
+
+print("Минимальное значение:", mn)
+print("Максимальное значение:", mx)
+print("Среднее арифметическое:", avg)
